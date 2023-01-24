@@ -58,7 +58,7 @@ const DashboardLayout = () => {
   const { onToggleMode } = useSettings()
 
   return (
-    <>
+    <Stack direction="row">
       <Box
         p={2}
         sx={{
@@ -95,6 +95,7 @@ const DashboardLayout = () => {
               {Nav_Buttons.map((el) =>
                 el.index === selected ? (
                   <Box
+                    key={el.index}
                     sx={{
                       backgroundColor: theme.palette.primary.main,
                       borderRadius: 1.5,
@@ -163,7 +164,7 @@ const DashboardLayout = () => {
         </Stack>
       </Box>
       <Outlet />
-    </>
+    </Stack>
   );
 };
 
