@@ -14,7 +14,7 @@ const Conversation = () => {
     <Stack height="100%" maxHeight="100vh" width="auto">
       <Header />
       <Box width="100%" sx={{ flexGrow: 1, height: "100%", overflowY: "scroll" }}>
-        <Message />
+        <Message menu={true} />
       </Box>
       <Footer />
     </Stack>

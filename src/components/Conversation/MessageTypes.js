@@ -26,7 +26,7 @@ export const Timeline = ({ el }) => {
   );
 };
 
-export const TextMessage = ({ el }) => {
+export const TextMessage = ({ el, menu }) => {
   const theme = useTheme();
   return (
     <Stack direction="row" justifyContent={el.incoming ? "start" : "end"}>
@@ -47,12 +47,12 @@ export const TextMessage = ({ el }) => {
           {el.message}
         </Typography>
       </Box>
-      <MessageOptions />
+      {menu && <MessageOptions />}
     </Stack>
   );
 };
 
-export const MediaMessage = ({ el }) => {
+export const MediaMessage = ({ el, menu }) => {
   const theme = useTheme();
   return (
     <Stack direction="row" justifyContent={el.incoming ? "start" : "end"}>
@@ -80,12 +80,12 @@ export const MediaMessage = ({ el }) => {
           </Typography>
         </Stack>
       </Box>
-      <MessageOptions />
+      {menu && <MessageOptions />}
     </Stack>
   );
 };
 
-export const ReplyMessage = ({ el }) => {
+export const ReplyMessage = ({ el, menu }) => {
   const theme = useTheme();
   return (
     <Stack direction="row" justifyContent={el.incoming ? "start" : "end"}>
@@ -122,12 +122,12 @@ export const ReplyMessage = ({ el }) => {
           </Typography>
         </Stack>
       </Box>
-      <MessageOptions />
+      {menu && <MessageOptions />}
     </Stack>
   );
 };
 
-export const LinkMessage = ({ el }) => {
+export const LinkMessage = ({ el, menu }) => {
   const theme = useTheme();
   return (
     <Stack direction="row" justifyContent={el.incoming ? "start" : "end"}>
@@ -176,12 +176,12 @@ export const LinkMessage = ({ el }) => {
           </Stack>
         </Stack>
       </Box>
-      <MessageOptions />
+      {menu && <MessageOptions />}
     </Stack>
   );
 };
 
-export const DocumentMessage = ({ el }) => {
+export const DocumentMessage = ({ el, menu }) => {
   const theme = useTheme();
   return (
     <Stack direction="row" justifyContent={el.incoming ? "start" : "end"}>
@@ -220,7 +220,7 @@ export const DocumentMessage = ({ el }) => {
           </Typography>
         </Stack>
       </Box>
-      <MessageOptions />
+      {menu && <MessageOptions />}
     </Stack>
   );
 };
